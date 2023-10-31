@@ -33,7 +33,7 @@ if (idMatch) {
   console.log('ID not found in the URL.');
 }
 
-  const existingPdfBytes = await fetch("../certificate_temp.pdf").then((res) =>
+  const existingPdfBytes = await fetch("certificate_temp.pdf").then((res) =>
     res.arrayBuffer()
   );
 
@@ -88,25 +88,25 @@ if (idMatch) {
 
 
   // Draw the grade
-  const urlFontSize = 8.05;
-  const urlText = `gdscpescoe.tech/studyjam/verify/${id}`;
-  const urlCodeX = pageWidth  - 150; // Adjust the position
-  const urlCodeY = 40; // Adjust the position
+  // const urlFontSize = 8.05;
+  // const urlText = `https://www.cloudskillsboost.google/public_profiles/${id}`;
+  // const urlCodeX = pageWidth  - 150; // Adjust the position
+  // const urlCodeY = 40; // Adjust the position
 
-  firstPage.drawText(urlText, {
-    x: 604,
-    y: urlCodeY,
-    size: urlFontSize,
-    font: SanChezFont,
-    width : 10,
-    color: rgb(103 / 255, 108 / 255, 114 / 255), // Set color to RGB(103, 108, 114)
-  });
-    // Calculate the position and size for the URL text
+  // firstPage.drawText(urlText, {
+  //   x: 604,
+  //   y: urlCodeY,
+  //   size: urlFontSize,
+  //   font: SanChezFont,
+  //   width : 10,
+  //   color: rgb(103 / 255, 108 / 255, 114 / 255), // Set color to RGB(103, 108, 114)
+  // });
+  //   // Calculate the position and size for the URL text
    
   
 
   // Fetch the QR code image
-  const qrCodeResponse = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://gdscpescoe.tech/studyjam/verify/${id}`);
+  const qrCodeResponse = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.cloudskillsboost.google/public_profiles/${id}`);
   const qrCodeImageBlob = await qrCodeResponse.blob();
 
   // Convert the blob to a Uint8Array
